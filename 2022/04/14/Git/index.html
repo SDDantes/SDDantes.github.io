@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>Git 合作开发教程 | 西绪福斯的山坡</title>
+  <meta name="author" content="MirrDark" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。 总算找到一个能写的主题了，实在是不容易。 一般来说，git的合作能够查到两种方式：  依赖于fork仓库，然后pull issue的。 依赖于多分支然后进行分支合并的  这方面倒是没有比较完善的（和我胃口的）教程，所以自己写一篇。 这篇教程不会介绍版本记录的基本用法，而是介绍如何用版本记录工具进行合作。 由于作者没有参加过任">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 合作开发教程">
+<meta property="og:url" content="https://mirrdark.top/2022/04/14/Git/index.html">
+<meta property="og:site_name" content="西绪福斯的山坡">
+<meta property="og:description" content="Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。 总算找到一个能写的主题了，实在是不容易。 一般来说，git的合作能够查到两种方式：  依赖于fork仓库，然后pull issue的。 依赖于多分支然后进行分支合并的  这方面倒是没有比较完善的（和我胃口的）教程，所以自己写一篇。 这篇教程不会介绍版本记录的基本用法，而是介绍如何用版本记录工具进行合作。 由于作者没有参加过任">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mirrdark.top/null">
+<meta property="article:published_time" content="2022-04-13T18:12:14.000Z">
+<meta property="article:modified_time" content="2022-04-13T18:41:13.493Z">
+<meta property="article:author" content="MirrDark">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mirrdark.top/null">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://unpkg.com/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://candinya.com">作者博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">项目链接</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">西绪福斯的山坡</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>西绪福斯的山坡</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article>
+    
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center">Git 合作开发教程</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><i class="fa fa-calendar"></i> 2022-04-14</li>
+                <li><i class="fa fa-user"></i> 作者 MirrDark</li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~1.66K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1649875273493"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Git 合作开发教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%9A%E4%BD%A0%E5%87%A0%E4%B9%8E%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.</span> <span class="toc-text">基础知识：你几乎肯定会用到的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork-amp-pull-issue"><span class="toc-number">1.2.</span> <span class="toc-text">fork &amp; pull issue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#checkout-amp-merge"><span class="toc-number">1.3.</span> <span class="toc-text">checkout &amp; merge</span></a></li></ol></li></ol>
+                </div>
+            
+            <hr />
+            <h1 id="Git-合作开发教程"><a href="#Git-合作开发教程" class="headerlink" title="Git 合作开发教程"></a>Git 合作开发教程</h1><p><strong>本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。</strong></p>
+<p>总算找到一个能写的主题了，实在是不容易。</p>
+<p>一般来说，git的合作能够查到两种方式：</p>
+<ul>
+<li>依赖于fork仓库，然后pull issue的。</li>
+<li>依赖于多分支然后进行分支合并的</li>
+</ul>
+<p>这方面倒是没有比较完善的（和我胃口的）教程，所以自己写一篇。</p>
+<p>这篇教程不会介绍版本记录的基本用法，而是介绍如何用版本记录工具进行合作。</p>
+<p>由于作者没有参加过任何实践中的大型项目正式开发，所以对feature、hot-fix啥的都不懂。这篇文章只是单纯地集中于——多人如何分配分支并且把各自的更新最终提交到master分支上。</p>
+<h2 id="基础知识：你几乎肯定会用到的操作"><a href="#基础知识：你几乎肯定会用到的操作" class="headerlink" title="基础知识：你几乎肯定会用到的操作"></a>基础知识：你几乎肯定会用到的操作</h2><p>git revert 将当前分支的上上次提交作为一个新的修改提交</p>
+<p>git reset    重置暂存区，但不修改文件（工作区）与HEAD指向</p>
+<p>git reset –hard    改变HEAD指向，即撤销commit并且修改文件（工作区）</p>
+<p>git stash 将当前工作区保存至一个临时存放点，同时恢复工作区到HEAD，等同于git stash save</p>
+<p>git stash pop  弹出上一个指令保存的工作区修改</p>
+<p>git checkout 转换到已存在的分支</p>
+<p>git checkout -b 创建并转换到该分支</p>
+<p>git branch 列出所有分支</p>
+<p>git branch &lt;分支名&gt; 基于上次提交创建新分支</p>
+<p>git merge —no-ff &lt;分支名&gt;        用于在主要版本更新分支合并dev分支，使用no-ff禁止fast forward，使得提交记录只有主要的合并记录。把这个参数去掉就是fast-forward或者三元合并了，但对于master和dev之间的关系来说，几乎肯定是fast-forward，详情请查询git的分支合并策略。</p>
+<p>git rebase &lt;分支名&gt;        在个人分支合并来自其他人提交到主要分支上的信息，之所以不用merge，是为了防止出现极其混乱极其复杂的极其恐怖极其难以追溯的提交历史网状结构</p>
+<p>git tag <tag> 上tag</p>
+<p>git push –tags 推送tag到远程</p>
+<h2 id="fork-amp-pull-issue"><a href="#fork-amp-pull-issue" class="headerlink" title="fork &amp; pull issue"></a>fork &amp; pull issue</h2><p>本网站目前就是用这个方式多人合作编写的。适合于开源大型项目。</p>
+<p>很遗憾的是，我实际上并不擅长于这种方式去合作。</p>
+<h2 id="checkout-amp-merge"><a href="#checkout-amp-merge" class="headerlink" title="checkout &amp; merge"></a>checkout &amp; merge</h2><p>适合于同一工作团队进行合作开发。下面的内容局限于（我估计）最多十人的团队，如果是一个百人级别的团队，还请另寻高明了，比如多特性分支管理，具体了解hadoop的开发模式。</p>
+<p>master分支，保持稳定，任何人不得直接提交，只能使用merge合并来自dev的分支。</p>
+<p>dev分支，开发的主要分支，所以对master分支的改动必须得为经由dev分支merge而来。</p>
+<p>具体来说，就是每人clone一个master分支，然后checkout一个dev分支，之后在dev分支开发。</p>
+<p>任何人若想提交自己的更改到远程仓库，必须首先在本地dev分支commit，然后pull或者fetch + rebase，有冲突就解决冲突。本地合并完后再push到远程的dev分支。至于何时将远程的dev分支合并到master分支，则由管理人员决定。若决定发布一个大版本，则在master分支上打tag。</p>
+<p>那可不可以直接每个人都使用单个master分支呢？当然是可以的，每个人clone后直接开发，然后commit，之后pull解决冲突，之后push。这样做也是能成的，因为本质上两台机器上的master分支也是不同分支，pull和push的过程中都会做merge，只要冲突都在本地解决好了，那么在远程仓库都可以顺利地merge。这种做法非常不正规，只建议在非常简单的情形下使用。</p>
+<p>那么到底正式的做法与不正式的做法之间的区别在于哪里？在于你能够追溯到多么稳定的代码版本、各个分支上的代码稳定性、提交历史的清晰程度。</p>
+
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://mirrdark.top/2022/04/14/Git/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://mirrdark.top/2022/04/14/Git/";
+            const title         = "「Git 合作开发教程」";
+            const excerpt       = `Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。
+总算找到一个能写的主题了，实在是不容易。
+一般来说，git的合作能够查到两种方式：
+
+依赖于fork仓库，然后pull issue的。
+依赖于多分支然后进行分支...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    
+                </div>
+                <div class="pull-date">
+                <span>最后编辑：2022-04-14</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 一篇迟来了一年的导航 - 2022版" href="/2022/04/14/intro2/">&lt; 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center"></p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                11
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                0
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                1
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar"></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B"><span class="toc-text">Git 合作开发教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%9A%E4%BD%A0%E5%87%A0%E4%B9%8E%E8%82%AF%E5%AE%9A%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">基础知识：你几乎肯定会用到的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork-amp-pull-issue"><span class="toc-text">fork &amp; pull issue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#checkout-amp-merge"><span class="toc-text">checkout &amp; merge</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
+                
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 0.6em;">作业</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2022/04/14/Git/"><i class="fa  fa-book"></i> Git 合作开发教程</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/04/14/intro2/"><i class="fa  fa-book"></i> 一篇迟来了一年的导航 - 2022版</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/02/15/capitalism/"><i class="fa  fa-book"></i> 《新教伦理与资本主义精神》读书笔记</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/02/01/WhereArePosts/"><i class="fa  fa-book"></i> 更新去哪了？</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/05/01/HardWayToDraw-2/"><i class="fa  fa-book"></i> 苦大仇深画画路 其二</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@Candinya"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 西绪福斯的山坡 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by MirrDark.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://unpkg.com/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://unpkg.com/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
