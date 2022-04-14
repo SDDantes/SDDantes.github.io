@@ -2,8 +2,6 @@
 title: 苦大仇深画画路 其一
 date: 2021-04-02 00:12:16
 tags:
-preview: 37
-cover: /img/cover.jpg
 ---
 
 

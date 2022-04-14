@@ -2,7 +2,6 @@
 title: 西绪福斯的山…wait，WTF is this？
 date: 2021-03-23 00:31:46
 tags: 
-preview: 101
 cover: /img/cover.jpg
 ---
 
@@ -12,7 +11,7 @@ cover: /img/cover.jpg
 
 这篇文章大概会在相当一段时间内置顶并成为实际上的导航，所以如果你看到它了，点进来看看如何？
 
-我求求你点进来看看吧。
+我求求你点进来看看吧。<!-- more -->
 
 ### 这又是甚么？
 

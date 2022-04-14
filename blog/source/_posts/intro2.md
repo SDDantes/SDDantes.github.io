@@ -5,10 +5,11 @@ pic: cover.jpg
 date: 2022-04-14 02:12:14
 comments: false
 toc: true
-preview: 30
 ---
 
 
+
+这是这个网站的导航，不进来瞧一瞧看一看吗？<!-- more -->
 
 各位好，我是MirrDark。
 
@@ -20,4 +21,4 @@ preview: 30
 
 你要是愿意逛这么个半成品网站，那也行。
 
-哦对了，网站主题是Kratos-Rebirth，由大家的超人Candinya开发，各位不妨[他的博客](https://candinya.com/)看看，~~然后给他一个赞助~~
+哦对了，网站主题是Kratos-Rebirth，由超人Candinya开发，各位不妨去[他的博客](https://candinya.com/)看看，~~然后给他一个赞助~~

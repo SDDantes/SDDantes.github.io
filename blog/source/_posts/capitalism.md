@@ -2,15 +2,14 @@
 title: 《新教伦理与资本主义精神》读书笔记
 date: 2022-02-15 12:00:49
 tags: 作业
-preview: 24
-cover: /img/CAM0.jpg
+pic: CAM0.jpg
 ---
 
 “社会学概论”课程的读书笔记：没人比我更懂韦伯！
 
 <br/><br/>
 
-*Chaosls  投稿  全文仅供学习参考*
+*Chaosls  投稿  全文仅供学习参考*<!-- more -->
 
 <br/><br/>
 

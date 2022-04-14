@@ -4,7 +4,7 @@ date: 2021-03-23 00:13:00
 tags:
 ---
 
-大家吼哇！因为疫情宅在家，所以把以前的文件整理了一下，正好把以前写的一篇英国诗歌《古舟子咏》（*The Rime of the Ancient Mariner*）的分析找到了。于是就把它发到这里来。
+大家吼哇！因为疫情宅在家，所以把以前的文件整理了一下，正好把以前写的一篇英国诗歌《古舟子咏》（*The Rime of the Ancient Mariner*）的分析找到了。于是就把它发到这里来。<!-- more -->
 
 大家有兴趣的话，也可以看一看这首诗歌的中文译本。Poetry is what gets lost in translation, but this poem’s Chinese edition is also worth reading.
 

@@ -187,6 +187,7 @@ label:
 - **avatarUri** : 头像的图片地址链接
 
 - **mobile_toc** : 移动端文章目录显示相关配置
+  
   - **hide** : (*true/false*)是否隐藏移动端目录
   - **hide_id** : (*true/false*)移动端目录前是否自动补充的标号
 

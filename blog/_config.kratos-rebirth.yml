@@ -1,6 +1,7 @@
 # Global 全局配置
 site_analytics: 
-hoster: <a href="https://github.io" target="_blank">Github Pages</a>
+#hoster: <a href="https://github.io" target="_blank">Github Pages</a>
+hoster: 
 site_logo:
 snow: false
 click_animate_js: 'candy'
@@ -34,9 +35,9 @@ menu:
 label:
   index: <i class="fa fa-home"></i>首页
   archives: <i class="fa fa-file"></i>档案馆
-  friends: <i class="fa fa-paw"></i>好伙伴
+  friends: <i class="fa fa-paw"></i>友情链接
   sites:
-    submenu: <i class="fa fa-link"></i>链接
+    submenu: <i class="fa fa-link"></i>Kratos-Rebirth
     author: 作者博客
     project: 项目链接
 
@@ -45,14 +46,14 @@ group_link:
 contact:
   weibo: 
   mail: 
-  telegram: CandyUnion
+  telegram: 
   twitter: 
   facebook: 
   linkedin: 
   fediverse:
-    instance: nya.one
-    username: Candinya
-  github: Candinya
+    instance: 
+    username: 
+  github: 
   rss:
 timenotice: 本站已运行
 icp: 
@@ -60,7 +61,7 @@ psr:
   
 # Post Page 文章页配置
 posts:
-  show_cc: true
+  show_cc: false  # 是否显示CreativeCommon知识共享协议
   donate: false
   share: true
   comments: 
@@ -132,7 +133,7 @@ aplayer:
   meting:
     server: netease
     type: playlist
-    id: 3204190542
+    id: 926782197
   order: random
 
 # Widgets 侧边栏小挂件
@@ -144,7 +145,7 @@ widgets:
 - category
 - tagcloud
 - posts
-avatarUri: /images/avatar.webp
+avatarUri: /images/avatar.jpg
 mobile_toc: 
   hide: false
   hide_id: false
@@ -164,11 +165,11 @@ search:
 jsconfig:
   main:
     pic:
-      CDN: true # 表示使用 CDN 加载图片
-      random_amount: 20 # 表示从1~20
+      CDN: false # 表示使用 CDN 加载图片
+      random_amount: 8 # 表示从1~8
       filename: "images/thumb/thumb_{no}.webp" # 相对于主题根目录，表示文件名的格式, {no} 用以指代随机的编号。
                                               # 如果包含 // 表示使用指定域名的绝对路径（例如第三方图床服务等），那么会忽略 CDN 选项
-    createTime: "2018/05/06 17:03:12"
+    createTime: "2018/03/23 00:00:00"
     donateBtn: "支持我~"
     scanNotice: "扫一扫，好不好？"
     qr_alipay: "/images/alipayqr.webp"
@@ -195,16 +196,8 @@ friends:
     description: "好伙伴们在哪里~"
     updated: "2021-01-18"
   list:
-  - name: "猫猫①号"
+  - name: "Candinya"
     bio: "喵~"
-    avatar: "../images/avatar.webp"
+    avatar: "../images/candinya.webp"
     link: "https://candinya.com"
-  - name: "猫猫②号"
-    bio: "喵喵~"
-    avatar: "../images/avatar.webp"
-    link: "https://candinya.com"
-  - name: "猫猫⑨号"
-    bio: "咪啪~"
-    avatar: "../images/avatar.webp"
-    link: "https://candinya.com"
-  verify: true # 验证每个友链的可访问性，炸了会有提示
+  verify: false # 验证每个友链的可访问性，炸了会有提示
