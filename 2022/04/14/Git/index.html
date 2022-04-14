@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。 总算找到一个能写的主题了，实在是不容易。 一般来说，git的合作能够查到两种方式：  依赖于fork仓库，然后pull issue的。 依赖于多分支然后进行分支合并的  这方面倒是没有比较完善的（和我胃口的）教程，所以自己写一篇。 这篇教程不会介绍版本记录的基本用法，而是介绍如何用版本记录工具进行合作。 由于作者没有参加过任">
+  <meta name="description" content="Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 合作开发教程">
 <meta property="og:url" content="https://mirrdark.top/2022/04/14/Git/index.html">
 <meta property="og:site_name" content="西绪福斯的山坡">
-<meta property="og:description" content="Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。 总算找到一个能写的主题了，实在是不容易。 一般来说，git的合作能够查到两种方式：  依赖于fork仓库，然后pull issue的。 依赖于多分支然后进行分支合并的  这方面倒是没有比较完善的（和我胃口的）教程，所以自己写一篇。 这篇教程不会介绍版本记录的基本用法，而是介绍如何用版本记录工具进行合作。 由于作者没有参加过任">
+<meta property="og:description" content="Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mirrdark.top/null">
 <meta property="article:published_time" content="2022-04-13T18:12:14.000Z">
-<meta property="article:modified_time" content="2022-04-13T18:41:13.493Z">
+<meta property="article:modified_time" content="2022-04-14T19:09:57.963Z">
 <meta property="article:author" content="MirrDark">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mirrdark.top/null">
@@ -97,12 +97,12 @@
                                     
                                 
                                     
-                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>友情链接</a></li>
                                     
                                 
                                     
                                         <li>
-                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <a><i class="fa fa-link"></i>Kratos-Rebirth</a>
                                             <ul class="sub-menu">
                                                 
                                                     
@@ -183,7 +183,7 @@
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1649875273493"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1649963397963"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
                 <div class="kratos-post-inner-toc">
@@ -191,7 +191,7 @@
                 </div>
             
             <hr />
-            <h1 id="Git-合作开发教程"><a href="#Git-合作开发教程" class="headerlink" title="Git 合作开发教程"></a>Git 合作开发教程</h1><p><strong>本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。</strong></p>
+            <h1 id="Git-合作开发教程"><a href="#Git-合作开发教程" class="headerlink" title="Git 合作开发教程"></a>Git 合作开发教程</h1><p><strong>本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。</strong><span id="more"></span></p>
 <p>总算找到一个能写的主题了，实在是不容易。</p>
 <p>一般来说，git的合作能够查到两种方式：</p>
 <ul>
@@ -225,10 +225,6 @@
 <p>那么到底正式的做法与不正式的做法之间的区别在于哪里？在于你能够追溯到多么稳定的代码版本、各个分支上的代码稳定性、提交历史的清晰程度。</p>
 
         </div>
-        
-            <div class="kratos-copyright text-center clearfix">
-                <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
-            </div>
         
         <footer class="kratos-entry-footer clearfix">
             
@@ -290,12 +286,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://mirrdark.top/2022/04/14/Git/";
             const title         = "「Git 合作开发教程」";
-            const excerpt       = `Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。
-总算找到一个能写的主题了，实在是不容易。
-一般来说，git的合作能够查到两种方式：
-
-依赖于fork仓库，然后pull issue的。
-依赖于多分支然后进行分支...`;
+            const excerpt       = `Git 合作开发教程本文尚未完结，内容亟待补充、修正与排版，请谨慎阅读。`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -317,7 +308,7 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2022-04-14</span>
+                <span>最后编辑：2022-04-15</span>
                 </div>
             </div>
         </footer>
@@ -329,6 +320,10 @@
                 <a title=" 一篇迟来了一年的导航 - 2022版" href="/2022/04/14/intro2/">&lt; 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" 逃离互联网" href="/2022/04/14/RunAwayFromInternet/">下一篇 &gt;</a>
+            </div>
             
         </nav>
     
@@ -352,7 +347,7 @@
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
         <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/images/avatar.webp" />
+            <img class="about-photo" src="/images/avatar.jpg" />
         </div>
     </div>
     <div class="textwidget">
@@ -364,7 +359,7 @@
                 文章
             </span>
             <span class="count">
-                11
+                12
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -421,6 +416,12 @@
         
           
           
+            <a class="list-group-item" href="/2022/04/14/RunAwayFromInternet/"><i class="fa  fa-book"></i> 逃离互联网</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2022/04/14/Git/"><i class="fa  fa-book"></i> Git 合作开发教程</a>
             
           
@@ -444,11 +445,7 @@
           
         
           
-          
-            <a class="list-group-item" href="/2021/05/01/HardWayToDraw-2/"><i class="fa  fa-book"></i> 苦大仇深画画路 其二</a>
             
-          
-        
           
             
           
@@ -480,12 +477,12 @@
                     <ul class="kratos-social-icons">
                         
                         
-                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
                         
                         
                         
-                        <li><a target="_blank" rel="me" href="https://nya.one/@Candinya"><i class="fa fa fa-share-alt-square"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        
+                        
+                        
                         
                     </ul>
                     <ul class="kratos-copyright">
@@ -499,7 +496,7 @@
                         </div>
                         <div>
                             <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                            
                         </div>
                         <div>
                             
@@ -555,7 +552,7 @@
     <meting-js
         server="netease"
         type="playlist"
-        id="3204190542"
+        id="926782197"
         order="random"
         fixed="true"
     >
