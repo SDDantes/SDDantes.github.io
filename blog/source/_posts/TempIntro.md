@@ -2,7 +2,7 @@
 title: 西绪福斯的山…wait，WTF is this？
 date: 2021-03-23 00:31:46
 tags: 
-cover: /img/cover.jpg
+cover: /images/cover.jpg
 ---
 
 
