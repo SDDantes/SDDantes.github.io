@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="">
-  <title>苦大仇深画画路 其一 | 西绪福斯的山坡</title>
+  <title>使用icecast搭建一个网络电台的指北 | 西绪福斯的山坡</title>
   <meta name="author" content="MirrDark" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -15,16 +15,16 @@
   
     <meta name="keywords" content="" />
   
-  <meta name="description" content="本文章反映了作者学习绘画过程中走的一定的弯路以及半吊子的理解，尽管已经做了一定修改但仍然不建议观看。 ——2021年6月22日编辑 搁置不知多少年又多少个月的绘画又再次开始了，事实上已经开始一个多月了。  上古年间的表情包，没想到我还能翻到。  三个星期以前一直都是是用纸笔进行绘画，甚至看上去还挺像样的。  不够立体，明暗关系不明，balabala，我帮你说完了。 在画完这张之后尝试去画另一个角色">
+  <meta name="description" content="在今年年初的时候了解到许多游戏都有电台功能——不是游戏内置的那种模拟电台（例子：GTA，虽然我从来没玩过GTA就是了），而是能连上真正的网络广播的那种电台机制。 这方面典型的游戏就是《欧洲卡车模拟器》、《模拟农场》。这也很容易理解，毕竟这些都是休闲游戏，在不紧不慢地开车、种田之余，听听广播什么的也是很常见的娱乐活动。这两个游戏都有默认的几个电台链接，只不过，由于游戏是国外开发的，里面配置的几个电台">
 <meta property="og:type" content="article">
-<meta property="og:title" content="苦大仇深画画路 其一">
-<meta property="og:url" content="https://mirrdark.top/2021/04/02/HardWayToDraw-1/index.html">
+<meta property="og:title" content="使用icecast搭建一个网络电台的指北">
+<meta property="og:url" content="https://mirrdark.top/2022/04/27/HowToUseIcecast/index.html">
 <meta property="og:site_name" content="西绪福斯的山坡">
-<meta property="og:description" content="本文章反映了作者学习绘画过程中走的一定的弯路以及半吊子的理解，尽管已经做了一定修改但仍然不建议观看。 ——2021年6月22日编辑 搁置不知多少年又多少个月的绘画又再次开始了，事实上已经开始一个多月了。  上古年间的表情包，没想到我还能翻到。  三个星期以前一直都是是用纸笔进行绘画，甚至看上去还挺像样的。  不够立体，明暗关系不明，balabala，我帮你说完了。 在画完这张之后尝试去画另一个角色">
+<meta property="og:description" content="在今年年初的时候了解到许多游戏都有电台功能——不是游戏内置的那种模拟电台（例子：GTA，虽然我从来没玩过GTA就是了），而是能连上真正的网络广播的那种电台机制。 这方面典型的游戏就是《欧洲卡车模拟器》、《模拟农场》。这也很容易理解，毕竟这些都是休闲游戏，在不紧不慢地开车、种田之余，听听广播什么的也是很常见的娱乐活动。这两个游戏都有默认的几个电台链接，只不过，由于游戏是国外开发的，里面配置的几个电台">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://mirrdark.top/null">
-<meta property="article:published_time" content="2021-04-01T16:12:16.000Z">
-<meta property="article:modified_time" content="2022-04-14T19:09:07.799Z">
+<meta property="article:published_time" content="2022-04-27T02:48:20.000Z">
+<meta property="article:modified_time" content="2022-04-27T02:49:51.255Z">
 <meta property="article:author" content="MirrDark">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mirrdark.top/null">
@@ -167,17 +167,17 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center">苦大仇深画画路 其一</h1>
+                <h1 class="kratos-entry-title text-center">使用icecast搭建一个网络电台的指北</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><i class="fa fa-calendar"></i> 2021-04-02</li>
+                <li><i class="fa fa-calendar"></i> 2022-04-27</li>
                 <li><i class="fa fa-user"></i> 作者 MirrDark</li>
                 <li>
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.70K
+                        ~4.14K
                     
                     字
                 </li>
@@ -187,92 +187,88 @@
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1649963347799"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1651027791255"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             <hr />
-            <p><strong>本文章反映了作者学习绘画过程中走的一定的弯路以及半吊子的理解，尽管已经做了一定修改但仍然不建议观看。</strong></p>
-<p>——2021年6月22日编辑</p>
-<p>搁置不知多少年又多少个月的绘画又再次开始了，事实上已经开始一个多月了。</p>
-<p><img src="/images/%E6%88%91%E6%81%A8%E7%BE%8E%E6%9C%AF.jpg"></p>
-<p>上古年间的表情包，没想到我还能翻到。</p>
-<p><br/><br/></p>
-<p>三个星期以前一直都是是用纸笔进行绘画，甚至看上去还挺像样的。</p>
-<p><img src="/images/IMG_20210318_143234.jpg"></p>
-<p><em>不够立体，明暗关系不明，balabala，我帮你说完了。</em></p>
-<p>在画完这张之后尝试去画另一个角色，然后深深地体会到了自己能力的局限性，隐约感觉到自己走到了盲人摸象式练习方法所能达到的极限，然后决定去正经地学习绘画的方法。</p>
-<p><br/><br/></p>
-<p>同时我开始熟悉数位板的使用。在使用数位板的时候我惊人地发现，之前用纸笔练出来的手眼协调，在数位板上真的是麻中麻中麻中麻之麻之麻麻。</p>
-<p>于是又不得不用数位板重新熟悉手感，每天抽出好几个小时来临别人的画，几乎是我晚上的全部空闲时间来练习。</p>
-<p>最后总算是有了纸笔上的一点点手感（其实根本就不是一回事，和纸笔相比，用数位板几乎完完全全是另一件事）（我就是无情的ctrl+z复读机）</p>
-<p><img src="/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2021-04-01-020559.jpg"></p>
-<p><em>线条没有粗细变化，脸部透视有问题，balabala，我帮你说完了。</em></p>
-<p>不过虽然有那么些问题，能画出这个程度我已经很满意了……</p>
-<p>满意了吗？不，这并不是我的画，这只是我照着别人的画临出来的。它实际上并不是我的真实水平，毕竟“照葫芦画瓢”可比创作要简单得多得多。</p>
-<p>那么我的真实水平是什么样子呢？我就不在这里放画了，我自己都不太好意思，有点恐怖。不过既然没做好，那么问题就来了：这是为什么？</p>
-<br/>
-
-<p><strong>！！！注意！！！</strong></p>
-<p><strong>其实站长也根本不懂绘画，所以下面的扯淡完全没有什么依据。你可以这么认为。</strong></p>
-<br/>
-
-<p>画画是个”手眼脑“三位一体的事情。上面这种情况，其实就是“脑子”没跟上“手眼协调”。</p>
+            <p>在今年年初的时候了解到许多游戏都有电台功能——不是游戏内置的那种模拟电台（例子：GTA，虽然我从来没玩过GTA就是了），而是能连上真正的网络广播的那种电台机制。</p>
+<p>这方面典型的游戏就是《欧洲卡车模拟器》、《模拟农场》。这也很容易理解，毕竟这些都是休闲游戏，在不紧不慢地开车、种田之余，听听广播什么的也是很常见的娱乐活动。这两个游戏都有默认的几个电台链接，只不过，由于游戏是国外开发的，里面配置的几个电台也都是国外的电台。</p>
+<p>既然有电台机制，那又怎么会有不让玩家自定义听哪些电台的道理呢？只要配置一下、添加几个网络电台的网址，就可以听到你随便想听的什么电台。也因为这个原因，我听了好几十期的……浙江交通之声小崔热线。</p>
 <blockquote>
-<p>手：听见没？听见没？别他妈怪我了，你也不会！</p>
+<p>这里放一个中国广播网址大全：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44929301/article/details/89350231">https://blog.csdn.net/qq_44929301/article/details/89350231</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aminfo/article/details/7646887">https://blog.csdn.net/aminfo/article/details/7646887</a></p>
 </blockquote>
-<p>那如果你的脑子里冒出了“画画怎么还需要脑子的”这种问题，那我可以告诉你，画画时需要考虑的东西比你想象的要复杂太多了。</p>
-<p><br/><br/></p>
-<blockquote>
-<p>“画画最重要的是什么？”</p>
-<p>“是开心！”</p>
-<p>“是形啊你个傻嗨！”</p>
-</blockquote>
-<p>素描并不是艺术的基础，素描只是“造型”艺术的基础（这里“造型”是个动宾短语）。很不幸的是，绝绝绝大多数艺术都逃离不了造型，事实上可以干脆地说我所说的练习画画就是在练习如何造型。</p>
-<p>什么是造型？我们生活在一个三维的空间里，任何事物都是立体的，这些东西于你眼中的样貌会随着你与它的相对角度而变化，哪怕是一个球，你绕着它转的时候它表面的明暗关系也会变化，通过这些你能知道这是一个准确的三维形体。而画画要做的事情，就是在一个二维的平面上尽可能准确且漂亮地表现三维的形体，这就是造型。</p>
-<p>造型，很不幸，是个非常非常非常——非常难的东西、他需要考虑的东西多得令我感到难以置信。</p>
-<p><br/><br/></p>
-<blockquote>
-<p>总有人打着画画的名号使用魔法。</p>
-</blockquote>
-<p>为什么这么说？因为你会发现有些人只需要不到十笔就能给你粗略勾勒出腿、手、头、腰等随便身体什么部位的形状。而普通人则会发现，无论他们怎么画，就是画不好，画不像。这是为什么？</p>
-<p>难道普通人画画的时候考虑了髋关节股骨膝关节髌骨胫骨腓骨四头肌腓肌之类的东西吗？我相信他们肯定没考虑，谁会考虑这些东西啊！</p>
-<p>但是这些真的要考虑，不然你画出来的骨头会弯曲，骨头上包着的就不是正确的肌肉、没有合适的空间留给关节、关节会不自然的扭曲等等等等。看画的人不用考虑这些东西也能判断一幅画的腿像不像真的腿，因为他们见过太多了。但对画画的人来说，不去思考这些东西，是画不出肌肉正确的线条起伏、肌肉组织间的挤压关系、合适的关节大小等等等等的。</p>
-<p>说的再明白点，如果画画的人连自己要造的型是什么样子都想不明白，又从何造起呢？</p>
-<p><br/><br/></p>
-<p>Perspective，透视理论，这个东西应该大部分人都听过，近大远小、近实远虚、近彩远灰，如果透视理论没入门的话，可能就会以为透视就是在说只需要在画画的时候注意下大小与线条虚实就行了。</p>
-<p>那么请你在不看照片的前提下思考下列问题：以侧45°角看向人脸，人的鼻子与眼睛位置关系是怎样的？下巴呈现怎样的形状？眉弓与眼睛呈现怎样的位置关系？靠近你的那个眼睛呈现什么形状？远离你的那个眼睛呈现什么形状？你会看到怎样的瞳孔位于眼睛的哪个位置？脖子和头部下边缘的位置关系是怎样的？</p>
-<p>想好了吗？画出来看看如何？</p>
-<p>嗯，这差不多就是你在画一个人头时需要考虑的基本问题的其中几个，如果你处理不好这些东西，你画出来的脸就会……很诡异，起码很不写实，毕竟判断一幅画好不好可不需要透视知识。</p>
-<p><img src="/images/-321af3b290b11911.jpg"></p>
-<p>而最致命的问题是什么呢？那就是——透视很难很难，你需要观察大量的实际结构并用相当长期的练习将透视的规律记在脑海里并能随时反映在手上，否则画任何东西都会严重脱离实际情况。</p>
-<p><br/><br/></p>
-<p>在前几天真正去深入了解素描时我才发现我之前的素描老师根本没教给我关于明暗的理论，以至于一直以来我都没有正确地认识素描。说得直白点就是明暗关系全靠瞎画。</p>
-<blockquote>
-<p>《三大面五大调子》</p>
-<p>三大面：黑白灰</p>
-<p>五大调子：亮部、暗部、明暗交界线、反光、投影。</p>
-<p>白 </p>
-<p>亮面：光直接照射面 </p>
-<p>高光：最亮的部分，根据物体材质而变化位置，一般画在光最亮的部分或者出现在明暗交界线上以表现形状。</p>
-<p>灰</p>
-<p>增强立体感层次感的过渡块。</p>
-<p>黑</p>
-<p>暗部：不受光直接照射的地方。<br>明暗交界线：出现于物体形变的地方，形变越强烈，明暗交界线越明显。虽然称为线，但它实际上是个面，其形状直接决定表现出来的物体形状，其重要性等同于轮廓线。是素描关系中物体上最暗的地方。<br>反光：暗部较亮的一部分，有来自其他地方的反射光，用于体现立体感增强层次感。</p>
-<p>投影</p>
-<p>物体的影子，不在物体本身上，不加入三大面。由物体遮挡光源形成。是素描关系中，画面上最暗的地方</p>
-</blockquote>
-<p><br/><br/></p>
-<p>所谓的“临”，把别人的画放在旁边然后对着画，这对于（我这样的）新手来说很容易陷入一个误区，那就是——过于注重线条。</p>
-<p>线条很重要，但是线条重要的原因在于其功能：塑造形。倘若在临别人的画的时候因为忽视了上述理论而专注于每根线条怎么画，就会导致，画是临完了，而且临得很像，却终究没有学会任何东西。</p>
-<p>形体结构决定线条，而不是反过来，要根据形体结构去分析线条是如何走的，这样线条就会正确地反应形体，才能造出型来。盲目临摹时，单纯地注重于线条、观察这个线条怎么走、去尽力地把线条画好、甚至连粗细都不注意，是错误的，从根本观念上就是错误的。这样的临没有任何成效。</p>
-<p>这也就是我接下来的努力方向：去学会用各种理论解释与掌握如何造型，并用线条将形表现出来。前者是脑，后者是眼与手。</p>
-<p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
-<blockquote>
-<p>最近的事，迄今为止的学习也好，成为医生的目标也好……</p>
-<p>都是认真的。</p>
-<p>我一直认真地活着。</p>
-<p>你别开玩笑了！</p>
-</blockquote>
+<p>这些都不谈了，总而言之，我觉得平时和人联机玩休闲游戏（比如Minecraft、Minecraft还有Minecraft）的时候，也可以放放广播啥的。</p>
+<p>虽然曾经尝试过用网易云音乐的分享耳机功能，但网易云的局限性还是太大了，连播客和本地文件都不能放。</p>
+<p>那么，一个能够自定义的网络广播就呼之欲出了——在现在这个不管是论坛、微博，还是直播平台、电商平台都有开源代码还能够一键部署的时代，一个自己搭建的自定义电台也不奇怪吧？</p>
+<p>本文将会讲述<strong>从服务器安装ubuntu 20.04 系统镜像安装好开始，到能够从浏览器听到自己放的广播为止</strong>的操作流程。<strong>不会涉及</strong>搭建HTTPS服务器的内容。</p>
+<p>本次电台搭建最终要达到的效果是，我能够自由控制电台的开关与播放的文件，并且控制播放，最终做到与所有连接到电台的人同步收听。这差不多是我能在玩游戏的时候和别人一起愉快地听电台的最低需求。</p>
+<p>那么首先介绍本文的主角，我使用的流媒体传输服务端软件：<a target="_blank" rel="noopener" href="https://icecast.org/">icecast</a>，选择它的原因很简单，那就是开源免费文档完备，还有较多的教程。虽然本文不会涉及，但是它还有比较高级的特性，比如视频流传输、TLS / SSL加密，是一个比较好的自主搭建电台的解决方案（做HTTPS传输也就是一个nginx反向代理 + 添加SSL证书能解决的事情，我不做只是懒的同时还穷而已）。</p>
+<p>那么假设你已经拥有了一台能够访问并且有公网IP的服务器，安装好了Ubuntu 20.04 LTS的镜像（18.04应该也适用于本指南）。</p>
+<p>首先更新软件：</p>
+<pre><code class="sh">$ sudo apt update
+$ sudo apt upgrade
+</code></pre>
+<p>然后安装icecast</p>
+<pre><code class="sh">$ sudo apt install icecast
+</code></pre>
+<p>在这个阶段，icecast会要求你输入三个密码：source密码、relay密码、admin密码。你自己设置一下就行，而且要记住。我们这个教程只会在推流的时候需要使用source密码，连admin密码都不会用到。而且，<strong>本教程最终搭建的服务器是使用明文传输的</strong>，密码也没有什么意义不是吗……</p>
+<p>**我不曾认为这个阶段会发生问题，直到我往密码设置里输入了一个 ‘&lt;’ 符号。**icecast会直接将你输入的密码不做任何加密的存放到一个XML文件里，因此如果你的密码包含‘&lt;’或者‘&gt;’符号，那么你就相当于对自己做了一个注入攻击，导致你的icecast服务无法正常启动，所以这一点还请注意。</p>
+<p>安装好以后，打开/etc/icecast2/icecast.xml文件。（如果你没有安装vim，就自己用apt install安装吧）（我应该不需要连vim的使用方法都教吧）。</p>
+<pre><code class="sh">$ sudo vim /etc/icecast2/icecast.xml
+</code></pre>
+<p>这就是上文说的那个XML文件，是icecast的配置文件。</p>
+<p>其中值得注意的几行如下：</p>
+<p>存放你的主机名（本教程不需要，你随便配置都可以）：</p>
+<pre><code class="xml">    &lt;!-- This is the hostname other people will use to connect to your server.
+         It affects mainly the urls generated by Icecast for playlists and yp
+         listings. You MUST configure it properly for YP listings to work!
+    --&gt;
+    &lt;hostname&gt;wahtever.example.com&lt;/hostname&gt;
+</code></pre>
+<p>你希望icecast监听的端口号。默认为8000，你可以随便改到一个没有被占用的端口，比如8001、6677、998啥的，但你要记住你填了啥。</p>
+<pre><code class="xml">&lt;!-- You may have multiple &lt;listen-socket&gt; elements --&gt;
+    &lt;listen-socket&gt;
+        &lt;port&gt;8000&lt;/port&gt;
+        &lt;!-- &lt;bind-address&gt;127.0.0.1&lt;/bind-address&gt; --&gt;
+        &lt;!-- &lt;shoutcast-mount&gt;/stream&lt;/shoutcast-mount&gt; --&gt;
+    &lt;/listen-socket&gt;
+</code></pre>
+<p>这个本教程也不需要填，但既然挺重要的也还是提一下。很多教程都让你修改这玩意儿，毕竟和安全有关，不过实际上不改可以运行。好奇怎么设置的话，可以去查查别的教程（不过你既然都在意安全了，怎么会看这个教程教你明文传输呢）。</p>
+<pre><code class="xml">    &lt;security&gt;
+        &lt;chroot&gt;0&lt;/chroot&gt;
+        &lt;!--
+        &lt;changeowner&gt;
+            &lt;user&gt;nobody&lt;/user&gt;
+            &lt;group&gt;nothing&lt;/group&gt;
+        &lt;/changeowner&gt;
+                --&gt;
+    &lt;/security&gt;
+</code></pre>
+<p>保存并退出vim，启动icecast2服务（你可能还需要重启服务器）。</p>
+<pre><code class="sh">$ service restart icecast2
+</code></pre>
+<p>确认一下icecast2服务启动了。</p>
+<pre><code class="sh">$ service --status-all
+</code></pre>
+<p>这个时候，你访问一下<code>http://服务器的IP:你指定的Port</code> ，你就能看到icecast的控制面板了，或者看看<code>/var/log/icecast2</code>文件下的日志，确认服务启动状况。如果你没看到这些东西，检查一下你是不是把XML文件格式给破坏了。</p>
+<p>服务端准备好了。接下来就要从本地推流。这里使用音频推流软件<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/butt/%E3%80%82%E5%90%8C%E6%A0%B7%EF%BC%8C%E8%BF%99%E4%B8%AA%E8%BD%AF%E4%BB%B6%E4%B9%9F%E6%98%AF%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84%EF%BC%8C%E4%BD%A0%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%94%AF%E6%8C%81%E4%B8%80%E4%B8%8B%E8%BF%99%E4%B8%AA%E8%BD%AF%E4%BB%B6%E3%80%82">https://sourceforge.net/projects/butt/。同样，这个软件也是开源免费的，你也可以去支持一下这个软件。</a></p>
+<p>下载后安装启动。点击Settings，Main菜单添加Server。Type选择Icecast，Address和Port填入IP和端口号，Password填入你的source密码，iceCast user填入source，iceCast mounpoint填入一个随便什么名字，以填入stream为例，在开始推流后你访问<code>http://你的IP:端口/stream</code>就可以收听广播了。</p>
+<p>在开始推流之前，可以在本地用你喜欢的播放器随便放点音乐，观察一下butt主面板上有没有显示出波形。如果没有，进入Settings，Audio菜单下调整Audio Device为你使用的设备，比如想广播你自己的声音就选择你的麦克风，想广播你在听的音乐，就选择你的耳机或者音响。</p>
+<p>设置好之后，点击butt主面上的播放按钮，就可以与服务器建立连接，把你的音频推流到服务器上了，浏览器打开<code>http://你的IP:端口/stream</code>，就能直接收听到你的声音。</p>
+<p>但是这个时候你会发现这么几个问题：</p>
+<ol>
+<li><p>广播有非常大的延迟，你本地的声音可能会过10秒才能从浏览器收听到。</p>
+<p>这个问题是没办法解决的——因为网络电台本就不是为了低延迟直播而准备的。</p>
+</li>
+<li><p>如果你推送的是你的声音输出设备（比如耳机或者音响）中的声音，那么你浏览器中听到的声音会被再次从本地推流到服务器上，然后再收回来，循环往复几次，你就会被自己的声音淹没。</p>
+</li>
+</ol>
+<p>这样子可没办法与朋友愉快地一起听电台——你如果不开浏览器，你和你的朋友之间会有十秒以上的延迟；你如果开浏览器，你就会制造出音频广播的回环。除非你有两台电脑，这个问题大概会让你头疼一会儿。</p>
+<p>我就是那个有两台电脑的人，但是我还是决定找出在同一台电脑上推流与收听的方法，解决方案也是比较容易想到的，那就是构造虚拟音频设备。</p>
+<p>这里为你介绍强大的<a target="_blank" rel="noopener" href="https://vb-audio.com/Voicemeeter/banana.htm">Voice Meeter</a>，虽然这个软件其实是一个专业的音频加工处理软件，但我们这里要使用它提供的几个虚拟音频设备。安装这个软件并且重启电脑后，你会发现你电脑的音频输出和音频输入设备列表里多了几个名字，比如VB-Audio VoiceMeeter VAIO。你可以打开一个播放器，它应该会有调整自己的输出到哪个音频设备的功能（比如Pot Player，在左上角下拉菜单，声音 - 默认声音输出设备里选择）。在butt调整Audio Device和你的播放器选择的虚拟音频设备保持一致，你就会发现，虽然你的播放器打开了，butt也能接收到波形，但是你却无法听到任何声音 —— 完美，不是吗。这时你再打开推流，浏览器打开网址，你就能完美地听到自己播放的（延迟了十秒）的音乐了。</p>
+<p>至此教程结束。</p>
 
         </div>
         
@@ -322,7 +318,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://mirrdark.top/2021/04/02/HardWayToDraw-1/",
+                text: "https://mirrdark.top/2022/04/27/HowToUseIcecast/",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -334,13 +330,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://mirrdark.top/2021/04/02/HardWayToDraw-1/";
-            const title         = "「苦大仇深画画路 其一」";
-            const excerpt       = `本文章反映了作者学习绘画过程中走的一定的弯路以及半吊子的理解，尽管已经做了一定修改但仍然不建议观看。
-——2021年6月22日编辑
-搁置不知多少年又多少个月的绘画又再次开始了，事实上已经开始一个多月了。
-
-上古年间的表情包，没想到我还...`;
+            const hostUrl       = "https://mirrdark.top/2022/04/27/HowToUseIcecast/";
+            const title         = "「使用icecast搭建一个网络电台的指北」";
+            const excerpt       = `在今年年初的时候了解到许多游戏都有电台功能——不是游戏内置的那种模拟电台（例子：GTA，虽然我从来没玩过GTA就是了），而是能连上真正的网络广播的那种电台机制。
+这方面典型的游戏就是《欧洲卡车模拟器》、《模拟农场》。这也很容易理解，毕...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -362,7 +355,7 @@
                     
                 </div>
                 <div class="pull-date">
-                <span>最后编辑：2022-04-15</span>
+                <span>最后编辑：2022-04-27</span>
                 </div>
             </div>
         </footer>
@@ -371,13 +364,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 西绪福斯的山…wait，WTF is this？" href="/2021/03/23/TempIntro/">&lt; 上一篇</a>
+                <a title=" 逃离互联网" href="/2022/04/14/RunAwayFromInternet/">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 蕾米莉亚的彩色铅笔" href="/2021/04/10/Remilia/">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
